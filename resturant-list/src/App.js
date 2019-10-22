@@ -1,4 +1,5 @@
 import React from 'react';
+import ResurantCard from "./Components/RestaurantCards"
 
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <NavBar/>
       hello world
+     <ResurantCard/>
     </div>
   );
 }
