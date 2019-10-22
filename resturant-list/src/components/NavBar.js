@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { NavLink } from "react-router-dom";
 import {
     Collapse,
     Navbar,
@@ -6,7 +7,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
+    // NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -39,10 +40,10 @@ export default function NavBar() {
               </UncontrolledDropdown>
             </NavItem>
             <NavItem>
-                <NavLink href="/components/">Sign In</NavLink>
+                <NavLink to='/Login'>Log In</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/components/">
+                <NavLink to='/Signup'>
                   <button> Sign Up</button>
                 </NavLink>
             </NavItem>
