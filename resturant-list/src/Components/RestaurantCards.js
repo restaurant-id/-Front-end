@@ -21,9 +21,12 @@ export default function RestaurantCard(props) {
           <Image src="https://source.unsplash.com/random" alt="Restaurant" thumbnail/>
         </Col>
           <CardBody>
-            <CardTitle>{"Restaurant name"}</CardTitle>
-            <CardText>{"Rating"}</CardText>
-            <CardText>{"location"}</CardText>
+          <CardTitle className="font-weight-bold">{"Restaurant name"}</CardTitle>
+            <CardText >{"Rating"}</CardText>
+            <CardText className="mr-5  float-right" >{"Price"}</CardText>
+            <CardText >{"Location"}</CardText>
+            <CardText className="mr-5  float-right">{"Type"}</CardText>
+            <CardLink  href="https://www.google.com"> 647 People have Recommend. Friends.......</CardLink> 
           </CardBody>
       </Row>
     </Card>
