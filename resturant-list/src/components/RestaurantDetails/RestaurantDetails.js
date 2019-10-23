@@ -1,6 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import ImgBanner from './ImgBanner';
+import MainBody from './mainBody';
 
 export default function RestaurantDetails() {
-	return <div>RestaurantDetails</div>;
+	return (
+		<div className='restaurant-details-component'>
+			<ImgBanner />
+			<MainBody />
+		</div>
+	);
 }
