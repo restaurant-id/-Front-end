@@ -5,16 +5,16 @@ import {
 	CardText,
 	CardBody,
 	CardTitle,
-	CardImg,
 	Row,
-	Col
+	Col,
+	CardLink
 } from 'reactstrap';
 import Image from 'react-bootstrap/Image';
 
 export default function RestaurantCard(props) {
 	return (
 		<Container>
-			<Card className='bg-danger'>
+			<Card className='bg-warning'>
 				<Row>
 					<Col xs={6} md={4}>
 						<Image
@@ -24,9 +24,17 @@ export default function RestaurantCard(props) {
 						/>
 					</Col>
 					<CardBody>
-						<CardTitle>{'Restaurant name'}</CardTitle>
+						<CardTitle className='font-weight-bold'>
+							{'Restaurant name'}
+						</CardTitle>
 						<CardText>{'Rating'}</CardText>
-						<CardText>{'location'}</CardText>
+						<CardText className='mr-5  float-right'>{'Price'}</CardText>
+						<CardText>{'Location'}</CardText>
+						<CardText className='mr-5  float-right'>{'Type'}</CardText>
+						<CardLink href='https://www.google.com'>
+							{' '}
+							647 People have Recommend. Friends.......
+						</CardLink>
 					</CardBody>
 				</Row>
 			</Card>

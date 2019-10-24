@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Form, Input, Button } from 'semantic-ui-react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 
-const Login = () => {
+const Login = props => {
 	const [credentials, setCredentials] = useState({
 		username: '',
 		password: ''
@@ -14,7 +14,8 @@ const Login = () => {
 			.post('/users/login', credentials)
 			.then(res => {
 				localStorage.setItem('token', res.data.token);
-				// props.history.push('/')
+				props.history.push('/');
+				window.location.reload(false);
 			})
 			.catch(err => console.log(err));
 	};

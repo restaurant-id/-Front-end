@@ -15,6 +15,17 @@ const Signup = props => {
 			.post('/users/register', credentials)
 			.then(res => {
 				localStorage.setItem('token', res.data.token);
+				props.history.push('/login');
+			})
+			.catch(err => console.log(err));
+	};
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		axiosWithAuth()
+			.post('/users/register', credentials)
+			.then(res => {
+				localStorage.setItem('token', res.data.token);
 				props.history.push('/');
 			})
 			.catch(err => console.log(err));
