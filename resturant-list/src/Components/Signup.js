@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axiosWithAuth from '../utils/axiosWithAuth';
+import axios from 'axios';
 import { Container, Form, Input, Button } from 'semantic-ui-react';
 
 const Signup = (props) => {
@@ -7,13 +7,16 @@ const Signup = (props) => {
   
   const handleSubmit = e => {
     e.preventDefault();
-    axiosWithAuth()
-    .post('/users/register', credentials)
-    .then(res => {
-      localStorage.setItem('token', res.data.token)
-      props.history.push('/login')
-    })
-    .catch(err => console.log(err));
+    axios
+      .post(
+        "https://build-restaurant-passport.herokuapp.com/users/register",
+        credentials
+      )
+      .then(res => {
+        localStorage.setItem("token", res.data.token);
+        props.history.push("/login");
+      })
+      .catch(err => console.log(err));
   }
 
   const handleChange = e => {
