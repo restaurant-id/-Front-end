@@ -1,20 +1,18 @@
-import React from "react";
+import React from 'react';
 import {
-  Container,
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  Row,
-  Col,
-  CardLink
-
-} from "reactstrap";
-import Image from "react-bootstrap/Image";
+	Container,
+	Card,
+	CardText,
+	CardBody,
+	CardTitle,
+	Row,
+	Col,
+	CardLink
+} from 'reactstrap';
+import Image from 'react-bootstrap/Image';
 
 export default function RestaurantCard({props}) {
   return (
-    
   <Container>
     <Card className="bg-warning">
       <Row>
@@ -35,5 +33,3 @@ export default function RestaurantCard({props}) {
   </Container>
   );
 }
-
-

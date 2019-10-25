@@ -6,17 +6,17 @@ import AppRouter from "./Components/AppRouter";
 import RestaurantList from "./Components/RestaurantList"
 
 import 'bootstrap/dist/css/bootstrap.css';
-import "semantic-ui-css/semantic.min.css";
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar/>
-      <RestaurantList/>
-      <AppRouter/>
-      <Footer/>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<NavBar />
+			<AppRouter />
+			<RestaurantDetails />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
