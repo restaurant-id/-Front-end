@@ -4,6 +4,7 @@ import Footer from './Components/Footer';
 import AppRouter from "./Components/AppRouter";
 // import RestaurantCard from "./Components/RestaurantCards"
 import RestaurantList from "./Components/RestaurantList"
+import RestaurantDetails from "./Components/RestaurantDetails/RestaurantDetails"
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -13,7 +14,8 @@ function App() {
 		<div className='App'>
 			<NavBar />
 			<AppRouter />
-			<RestaurantDetails />
+      <RestaurantList/>
+			
 			<Footer />
 		</div>
 	);

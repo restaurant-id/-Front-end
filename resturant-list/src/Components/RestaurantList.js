@@ -1,7 +1,6 @@
 import React,{useState, useEffect}from "react";
 import axiosWithAuth from "../utils/axiosWithAuth"
-// import RestaurantCard from "./Components/RestaurantCards.js" 
-
+import RestaurantCard from "../Components/RestaurantCards"
 
 
 export default function RestaurantList(props) {
@@ -9,10 +8,10 @@ export default function RestaurantList(props) {
 
     useEffect(() => {
         axiosWithAuth()
-        .get("/cities")
+        .get("/cities/1/restaurants")
         .then(res=>{
-            setCities(res.data);
-            console.log(res)
+            setCities(res.data.restaurants);
+            console.log(res.data.restaurants)
         })
         .catch(err => console.log(err));
     },[]);
@@ -20,11 +19,15 @@ export default function RestaurantList(props) {
 
     return(
         <div>
-            {cities.map(city=>{
+             {cities.map(city=>{
+                 return(
+                     <RestaurantCard 
+                     />
+                 )
+               
                 
-                console.log(city)
-            })}
-            
+            })} 
+        
         </div>
     )
 }
