@@ -11,19 +11,23 @@ import {
 } from 'reactstrap';
 import Image from 'react-bootstrap/Image';
 
-export default function RestaurantCard(props) {
+export default function RestaurantCard({props}) {
   return (
-    <Container>
+  <Container>
     <Card className="bg-warning">
       <Row>
         <Col xs={6} md={4}>
           <Image src="https://source.unsplash.com/random" alt="Restaurant" thumbnail/>
         </Col>
           <CardBody>
-          <CardTitle>{"Restaurant name"}</CardTitle>
-          <CardText>{"Rating"}</CardText>
-          <CardText>{"location"}</CardText>
-        </CardBody>
+          <CardTitle className="font-weight-bold">{}</CardTitle>
+            <CardText >{"Rating"}</CardText>
+            <CardText className="mr-5  float-right" >{"Price"}</CardText>
+            <CardText >{".city"}</CardText>
+            <CardText className="mr-5  float-right">{"address"}</CardText>
+            <CardText>{"description"}</CardText>
+            <CardLink  href="https://www.google.com"> 647 People have Recommend. Friends.......</CardLink> 
+          </CardBody>
       </Row>
     </Card>
   </Container>
