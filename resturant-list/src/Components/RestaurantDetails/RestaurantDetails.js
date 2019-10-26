@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ImgHeader from './ImgHeader';
-import MainBody from './mainBody';
+import LeftBody from './leftBody';
+import RightBody from './rightBody';
 import axiosWithAuth from '../../utils/axiosWithAuth';
 
 export default function RestaurantDetails() {
@@ -8,17 +9,20 @@ export default function RestaurantDetails() {
 
 	useEffect(() => {
 		axiosWithAuth()
-			.get(`/cities/1/restaurants`)
+			.get('/cities')
 			.then(res => {
-				setState(res.data);
+				return setState(res);
 			})
 			.catch(err => console.log(err));
 	}, []);
 
+	console.log(state);
+
 	return (
 		<div className='restaurant-details'>
 			<ImgHeader />
-			<MainBody state={state} />
+			<LeftBody />
+			<RightBody />
 		</div>
 	);
 }
