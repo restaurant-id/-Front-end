@@ -13,6 +13,7 @@ export default function mainBody(props) {
 						<div key={rest.restID}>
 							<h2>City: {rest.restName}</h2>
 							<h3>Name: {} </h3>
+							<p></p>
 						</div>
 				  ))
 				: null}
