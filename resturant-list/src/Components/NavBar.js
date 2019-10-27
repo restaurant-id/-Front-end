@@ -41,7 +41,9 @@ export default function NavBar() {
                     <NavLink to="/RestaurantList">Restaurants Near Me</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
+                  <DropdownItem>
+                    <NavLink to="/AddRestaurant">Add Restaurant</NavLink>
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               {isLogged ? (
