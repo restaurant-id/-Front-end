@@ -21,8 +21,7 @@ export default function RestaurantList(props) {
     return(
         <div>
             {cities.map(city=>{
-                
-                console.log(city)
+                return(<div></div>)
             })}
             
         </div>

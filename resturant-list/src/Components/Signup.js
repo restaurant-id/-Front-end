@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
-import axiosWithAuth from '../utils/axiosWithAuth';
-import { Container, Form, Input, Button } from 'semantic-ui-react';
+import React, { useState } from "react";
+import axios from "axios";
+import { Container, Form, Input, Button } from "semantic-ui-react";
 
 const Signup = props => {
-	const [credentials, setCredentials] = useState({
-		email: '',
-		username: '',
-		password: ''
-	});
+  const [credentials, setCredentials] = useState({
+    email: "",
+    username: "",
+    password: ""
+  });
 
-	const handleSubmit = e => {
-		e.preventDefault();
-		axiosWithAuth()
-			.post('/users/register', credentials)
-			.then(res => {
-				localStorage.setItem('token', res.data.token);
-				props.history.push('/login');
-			})
-			.catch(err => console.log(err));
-	};
+  const handleSubmit = e => {
+    e.preventDefault();
+    axios
+      .post(
+        "https://build-restaurant-passport.herokuapp.com/users/register",
+        credentials
+      )
+      .then(res => {
+        localStorage.setItem("token", res.data.token);
+        props.history.push("/Login");
+      })
+      .catch(err => console.log(err));
+  };
 
 	const handleChange = e => {
 		setCredentials({
