@@ -49,7 +49,7 @@ export default function RestaurantCard({props}) {
       </Row>
     </Card>
 
-    <Card className="bg-warning ">
+    <Card className="bg-warning mb-5">
       <Row>
         <Col xs={6} md={4}>
           <img className="mw-100" src={thumbImage} alt="Restaurant" thumbnail/>
