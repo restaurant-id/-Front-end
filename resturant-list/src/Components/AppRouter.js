@@ -8,6 +8,10 @@ import RestaurantDetails from './RestaurantDetails/RestaurantDetails';
 import RestaurantList from '../Components/Restaurants/RestaurantList';
 import AddRestaurant from './AddRestaurant';
 
+import RestaurantList from '../Components/Restaurants/RestaurantList';
+import AddRestaurant from './AddRestaurant';
+
+
 export default function AppRoute() {
 	return (
 		<div>
@@ -19,6 +23,12 @@ export default function AppRoute() {
 
 			<Route path='/RestaurantList' component={RestaurantList} />
 			<Route path='/AddRestaurant' component={AddRestaurant} />
+
+
+
+			<Route path='/RestaurantList' component={RestaurantList} />
+			<Route path='/AddRestaurant' component={AddRestaurant} />
+
 		</div>
 	);
 }
