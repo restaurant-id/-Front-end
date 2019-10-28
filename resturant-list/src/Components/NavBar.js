@@ -32,18 +32,20 @@ export default function NavBar() {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Map
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Restaurants Near Me</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Reset</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Map
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <NavLink to="/RestaurantList">Restaurants Near Me</NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    <NavLink to="/AddRestaurant">Add Restaurant</NavLink>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               {isLogged ? (
                 <NavItem>
                   <NavLink exact to="/" onClick={handleLogOut}>

@@ -19,15 +19,12 @@ export default function RestaurantList(props) {
 
     return(
         <div>
-             {cities.map(city=>{
-                 return(
-                     <RestaurantCard 
-                     />
-                 )
-               
-                
-            })} 
-        
+
+            {cities.map(city=>{
+                return(<div></div>)
+            })}
+            
+
         </div>
     )
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Footer() {
-	return <h2>Footer</h2>;
+export default function Footer(){
+    return(
+        <p align="center">&copy;Copyright Restaurant Passport 2019</p>
+    )
 }
