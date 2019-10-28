@@ -5,6 +5,8 @@ import Login from './Login';
 import Signup from './Signup';
 import RestaurantCard from './RestaurantCards';
 import RestaurantDetails from './RestaurantDetails/RestaurantDetails';
+import RestaurantList from '../Components/Restaurants/RestaurantList';
+import AddRestaurant from './AddRestaurant';
 
 export default function AppRoute() {
 	return (
@@ -15,6 +17,8 @@ export default function AppRoute() {
 			<Route path='/RestaurtantCard' component={RestaurantCard} />
 			<Route path="/RestaurtantDetails" component={RestaurantDetails}/>
 
+			<Route path='/RestaurantList' component={RestaurantList} />
+			<Route path='/AddRestaurant' component={AddRestaurant} />
 		</div>
 	);
 }

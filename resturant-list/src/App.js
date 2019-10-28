@@ -6,19 +6,20 @@ import AppRouter from "./Components/AppRouter";
 import RestaurantList from "./Components/RestaurantList"
 import RestaurantDetails from "./Components/RestaurantDetails/RestaurantDetails"
 
+
 import 'bootstrap/dist/css/bootstrap.css';
 import 'semantic-ui-css/semantic.min.css';
 
-function App() {
+const App =() => {
 	return (
-		<div className='App'>
-			<NavBar />
-			<AppRouter />
-      <RestaurantList/>
-			
-			<Footer />
-		</div>
-	);
+    <div className="App">
+      <NavBar />
+      <Container>
+        <AppRouter />
+      </Container>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
